@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   _ft_print_bits.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clvicent <clvicent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 14:07:56 by clvicent          #+#    #+#             */
-/*   Updated: 2023/01/20 16:42:17 by clvicent         ###   ########.fr       */
+/*   Created: 2023/01/25 15:19:32 by clvicent          #+#    #+#             */
+/*   Updated: 2023/01/25 17:48:21 by clvicent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_print_bits(char c)
 {
-	int	i;
+	int	bit;
 	int	nb;
 
-	i = 0;
+	bit = 7;
 	nb = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-		nb = nb * 10 + (str[i++] - '0');
-	if (str[i] != '\0')
-		return (0);
-	return (nb);
+	while (bit >= 0)
+	{
+		if (c & (1 << bit))
+		{
+			ft_putchar_fd('1', 1);
+			nb += (1 << bit);
+		}
+		else
+			ft_putchar_fd('0', 1);
+		ft_putchar_fd(' ', 1);
+		bit--;
+	}
+	ft_putstr_fd("||| ASCII : ", 1);
+	ft_putnbr_fd(nb, 1);
+	ft_putchar_fd('\n', 1);
 }

@@ -1,14 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: clvicent <clvicent@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/20 16:43:35 by clvicent          #+#    #+#             */
+/*   Updated: 2023/01/27 14:06:50 by clvicent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef MINITALK_H
 # define MINITALK_H
 
-# define LOG    printf("%s:%d %s()\n", __FILE__,__LINE__, __FUNCTION__);
-# define DEBUG 1
-# define PAUSE    if (DEBUG) {getchar();};
-
 # include <unistd.h>
-# include "../Libft/libft.h"
+# include "libft.h"
 # include <signal.h>
-# include <sys/types.h>
+# include <stdio.h>
 
 #endif

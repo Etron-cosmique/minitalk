@@ -6,7 +6,7 @@
 #    By: clvicent <clvicent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 16:26:04 by clvicent          #+#    #+#              #
-#    Updated: 2021/12/13 18:06:47 by clvicent         ###   ########.fr        #
+#    Updated: 2023/01/25 17:59:14 by clvicent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,8 @@ ft_toupper.c \
 ft_isdigit.c \
 ft_memset.c \
 ft_strdup.c \
-ft_strncmp.c
+ft_strncmp.c \
+_ft_print_bits.c
 
 SRCSB	= ft_lstnew.c \
 ft_lstadd_front.c \
